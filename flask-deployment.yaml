@@ -13,8 +13,9 @@ spec:
         app: flask
     spec:
       containers:
-        - name: flask
-          image: flask-app-local
-          imagePullPolicy: Never   # 💥 THIS LINE IS VERY IMPORTANT
+        - name: flask-container
+          image: flask-app:latest
+          imagePullPolicy: Never  # 💥 THIS LINE IS VERY IMPORTANT
           ports:
             - containerPort: 8000
+    
